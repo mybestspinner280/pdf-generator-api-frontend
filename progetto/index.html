@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generatore PDF Convocazioni</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Generatore PDF Convocazioni</h1>
+        
+        <div id="uploadSection" class="upload-section">
+            <p>Trascina qui il tuo file CSV o clicca per selezionarlo</p>
+            <input type="file" id="csvFile" accept=".csv" style="display: none;">
+        </div>
+
+        <div id="previewSection" class="preview-section hidden">
+            <h2>Anteprima dati</h2>
+            <div id="tableContainer"></div>
+            <div class="actions">
+                <button id="generateButton" class="button">Genera PDF</button>
+            </div>
+        </div>
+
+        <div id="progressSection" class="progress-section hidden">
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <p id="progressText">0% completato</p>
+        </div>
+
+        <div id="statusContainer"></div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
